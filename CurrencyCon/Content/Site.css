@@ -1,0 +1,43 @@
+﻿.dispFlex {
+    display: flex;
+} 
+
+.titlecolorblu {
+    color: blue !important;
+}
+ 
+.linenormal {
+    line-height: normal;
+}
+
+.centerBlock {
+    width: 50% !important;
+    margin: auto !important;
+}
+
+#From, #To {
+    padding-left: 0 !important;
+}
+
+.centerBlock {
+    width: 50% !important;
+    margin: auto !important;
+    line-height: normal !important;
+}
+ 
+.equaletxt {
+    color: cornflowerblue;
+    font-size: 1.4em;
+}
+
+.navColor {
+    background-color: lightskyblue; 
+}
+
+.active{
+    background-color:cornflowerblue;
+}
+
+::before li {
+    background-color:none;
+}

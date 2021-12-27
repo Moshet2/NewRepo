@@ -1,0 +1,35 @@
+﻿@model CurrencyCon.Models.ListCountryMoney
+
+@{
+    ViewBag.Title = "Currency Converter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    int NumofMoney = 1;
+    Dictionary<string, string> FromCountry = new Dictionary<string, string>();
+    Dictionary<string, string> toCountry = new Dictionary<string, string>();
+
+}
+ 
+<div class="col-md-12 col-lg-12 col-xs-12">
+    <div class="center-block text-center">
+        <h2 class="titlecolorblu">
+            @ViewBag.Title
+        </h2>
+        <div class="col-md-12 col-lg-12 col-xs-12 linenormal">
+            <div class="dispFlex">
+                <div class="centerBlock">
+                    @Html.TextBoxFor(model => NumofMoney, new { @class = "col-xs-4 ", @id = "Money" })
+                    <span class="col-xs-2">From:</span>
+                    @Html.DropDownListFor(model => FromCountry, new SelectList(Model.rates, "Value", "Key"), htmlAttributes: new { @class = "col-xs-2 ", @id = "From" })
+                    <span class="col-xs-2">To:</span>
+                    @Html.DropDownListFor(model => toCountry, new SelectList(Model.rates, "Value", "Key"), htmlAttributes: new { @class = "col-xs-2 ", @id = "To" })
+                </div>
+            </div>
+        </div>
+        <div class="text-center center-block">
+            <div class="text-center equaletxt" id="Equale"></div>
+        </div>
+
+    </div> 
+</div>
+
